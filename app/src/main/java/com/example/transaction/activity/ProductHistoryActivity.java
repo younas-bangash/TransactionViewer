@@ -1,6 +1,8 @@
 package com.example.transaction.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -69,6 +71,11 @@ public class ProductHistoryActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(),
+                R.color.title_text_color));
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
     }
 
     @Override

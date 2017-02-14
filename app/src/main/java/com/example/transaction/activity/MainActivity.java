@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity implements Callback, Service
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        toolbar.setTitle(getResources().getString(R.string.title_product));
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext(),
                 LinearLayoutManager.VERTICAL, false));
-        //recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
         if (savedInstanceState == null) {
             Intent bidingIntent = new Intent(this, TransactionsService.class);
             bindService(bidingIntent, this, BIND_AUTO_CREATE);

@@ -10,5 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
         android:src="@drawable/ic_home" />
+
+    <TextView
+        android:text="@string/title_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@color/title_text_color"
+        android:textSize="18sp" />
+
 </android.support.v7.widget.Toolbar>
