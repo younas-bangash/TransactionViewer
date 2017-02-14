@@ -7,6 +7,6 @@ import junit.framework.TestCase;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class DataClassTest extends TestCase{
+public class ApplicationTestClass extends TestCase{
 
 }

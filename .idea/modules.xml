@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Transaction-Viewer-master.iml" filepath="$PROJECT_DIR$/Transaction-Viewer-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TransactionViewerNew.iml" filepath="$PROJECT_DIR$/TransactionViewerNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
