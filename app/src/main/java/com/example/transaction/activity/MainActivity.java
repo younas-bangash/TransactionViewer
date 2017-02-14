@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements Callback, Service
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
         this.service = ((TransactionsService.LocalBinder) service).getService();
-        this.service.getTransactions(SECOND, this);
+        this.service.getTransactions(FIRST, this);
     }
 
     @Override
