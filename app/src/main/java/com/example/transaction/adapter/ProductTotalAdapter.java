@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.example.transaction.R;
 import com.example.transaction.model.Pair;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> {
@@ -33,7 +34,7 @@ public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> 
     public void onBindViewHolder(CustomViewHolder customViewHolder,final int i) {
         final Pair item = pairList.get(i);
         customViewHolder.header.setText(ssetCurrenySign(item.oldCurrency));
-        customViewHolder.description.setText(String.valueOf(item.priceGbp));
+        customViewHolder.description.setText(MessageFormat.format("£{0}", String.valueOf(item.priceGbp)));
         Log.d("TAG",""+item.oldCurrency);
 
     }
