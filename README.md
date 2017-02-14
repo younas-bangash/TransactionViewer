@@ -1,7 +1,7 @@
 # Transaction-Viewer
 This is a sample currency-conversion app.
 
-All the tests are standard Unit 4 tests, taking place on the test folder.
+One Test EspressoTest is placed in the test folder.
 
 All the examples to be run, are being placed on the assets folder.
 

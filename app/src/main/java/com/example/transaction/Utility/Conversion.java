@@ -1,7 +1,5 @@
 package com.example.transaction.Utility;
 
-import android.support.annotation.VisibleForTesting;
-
 import com.example.transaction.model.Pair;
 import com.example.transaction.model.Product;
 import com.example.transaction.model.Rate;
@@ -74,7 +72,6 @@ public class Conversion {
         return roundTwoDecimals(ratesPopulated.get(rate) * price);
     }
 
-    @VisibleForTesting
     public static Map<String, Double> convertCurrencyToGbp(List<Rate> rates) {
         Map<String, Double> rateSet = new HashMap<>();
         List<Rate> lRate = new ArrayList<>(rates);

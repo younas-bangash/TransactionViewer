@@ -1,8 +1,6 @@
 package com.example.transaction.Utility;
 
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
-
 
 import com.example.transaction.model.Rate;
 import com.example.transaction.model.Transaction;
@@ -24,13 +22,6 @@ public class Json {
         return mapper.readValue(exchangeStream, exchangeRateTypeRef);
     }
 
-    @VisibleForTesting
-    public static List<Rate> parseExchangeRates( String data) throws IOException {
-        TypeReference<List<Rate>> exchangeRateTypeRef = new TypeReference<List<Rate>>() {
-        };
-
-        return mapper.readValue(data, exchangeRateTypeRef);
-    }
 
     public static List<Transaction> parseTransactions(Context context, String fileName) throws IOException {
         InputStream transactionStream = context.getAssets().open(fileName);
@@ -40,12 +31,4 @@ public class Json {
         return mapper.readValue(transactionStream, transactionsTypeRef);
     }
 
-    @VisibleForTesting
-    public static List<Transaction> parseTransactions( String data) throws IOException {
-
-        TypeReference<List<Transaction>> transactionsTypeRef = new TypeReference<List<Transaction>>() {
-        };
-
-        return mapper.readValue(data, transactionsTypeRef);
-    }
 }
