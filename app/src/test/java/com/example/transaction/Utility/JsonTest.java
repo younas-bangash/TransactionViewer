@@ -28,13 +28,25 @@ import static org.junit.Assert.*;
 @Config(constants = BuildConfig.class, sdk = 16, manifest = "src/main/AndroidManifest.xml")
 public class JsonTest {
 
-    private String checkFirstRatesWithErrorValues = "[{\"from\":,\"rate\":\"0.77\",\"to\":\"GBP\"},{\"from\":\"GBP\",\"rate\":\"1.3\",\"to\":\"USD\"},{\"from\":\"USD\",\"rate\":\"1.09\",\"to\":\"CAD\"},{\"from\":\"CAD\",\"rate\":\"0.92\",\"to\":\"USD\"},{\"from\":\"GBP\",\"rate\":\"0.83\",\"to\":\"AUD\"},{\"from\":\"AUD\",\"rate\":\"1.2\",\"to\":\"GBP\"}]\n";
-    private String checkFirstRatesWithNumberValues = "[{\"from\":\"USD\",\"rate\":0.77,\"to\":\"GBP\"},{\"from\":\"GBP\",\"rate\":1.3,\"to\":\"USD\"},{\"from\":\"USD\",\"rate\":1.09,\"to\":\"CAD\"},{\"from\":\"CAD\",\"rate\":0.92,\"to\":\"USD\"},{\"from\":\"GBP\",\"rate\":0.83,\"to\":\"AUD\"},{\"from\":\"AUD\",\"rate\":1.2,\"to\":\"GBP\"}]\n";
+    private String checkFirstRatesWithErrorValues = "[{\"from\":,\"rate\":\"0.77\",\"to\":\"GBP\"}," +
+            "{\"from\":\"GBP\",\"rate\":\"1.3\",\"to\":\"USD\"},{\"from\":\"USD\",\"rate\":\"1.09\"," +
+            "\"to\":\"CAD\"},{\"from\":\"CAD\",\"rate\":\"0.92\",\"to\":\"USD\"},{\"from\":\"GBP\"," +
+            "\"rate\":\"0.83\",\"to\":\"AUD\"},{\"from\":\"AUD\",\"rate\":\"1.2\",\"to\":\"GBP\"}]\n";
+    private String checkFirstRatesWithNumberValues = "[{\"from\":\"USD\",\"rate\":0.77,\"to\":\"GBP\"}," +
+            "{\"from\":\"GBP\",\"rate\":1.3,\"to\":\"USD\"},{\"from\":\"USD\",\"rate\":1.09,\"to\":\"CAD\"}," +
+            "{\"from\":\"CAD\",\"rate\":0.92,\"to\":\"USD\"},{\"from\":\"GBP\",\"rate\":0.83,\"to\":" +
+            "\"AUD\"},{\"from\":\"AUD\",\"rate\":1.2,\"to\":\"GBP\"}]\n";
+
     private String checkFirstRatesOneItem = "[{\"from\":\"USD\",\"rate\":0.77,\"to\":\"GBP\"}]";
     private String checkFirstRatesOneItemNonArray = "{\"from\":\"USD\",\"rate\":0.77,\"to\":\"GBP\"}";
 
-    private String checkSecondTransactionWithErrorValues = "[{\"amount\":\"1\",\"sku\":,\"currency\":\"GBP\"},{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"EUR\"},{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"USD\"},{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"AUD\"}]";
-    private String checkSecondTransactionWithNumberValues = "[{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"GBP\"},{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"EUR\"},{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"USD\"},{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"AUD\"}]";
+    private String checkSecondTransactionWithErrorValues = "[{\"amount\":\"1\",\"sku\":,\"currency\"" +
+            ":\"GBP\"},{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"EUR\"},{\"amount\":\"1\"," +
+            "\"sku\":\"J4064\",\"currency\":\"USD\"},{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"AUD\"}]";
+    private String checkSecondTransactionWithNumberValues = "[{\"amount\":1,\"sku\":\"J4064\"," +
+            "\"currency\":\"GBP\"},{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"EUR\"}," +
+            "{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"USD\"},{\"amount\":1,\"sku\":\"J4064\",\"currency\":\"AUD\"}]";
+
     private String checkSecondTransactionOneItem = "[{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"GBP\"}]";
     private String checkSecondTransactionOneItemNonArray = "{\"amount\":\"1\",\"sku\":\"J4064\",\"currency\":\"GBP\"}";
 
