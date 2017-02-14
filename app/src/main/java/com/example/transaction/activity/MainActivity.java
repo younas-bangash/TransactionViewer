@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity implements Callback, Service
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext(),
                 LinearLayoutManager.VERTICAL, false));
         recyclerView.setHasFixedSize(true);
