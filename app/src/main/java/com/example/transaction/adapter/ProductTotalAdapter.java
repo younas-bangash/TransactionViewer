@@ -2,7 +2,6 @@ package com.example.transaction.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,6 @@ public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.product, null);
-
         CustomViewHolder viewHolder = new CustomViewHolder(view);
         return viewHolder;
     }
@@ -33,13 +31,12 @@ public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> 
     @Override
     public void onBindViewHolder(CustomViewHolder customViewHolder,final int i) {
         final Pair item = pairList.get(i);
-        customViewHolder.header.setText(ssetCurrenySign(item.oldCurrency));
-        customViewHolder.description.setText(MessageFormat.format("£{0}", String.valueOf(item.priceGbp)));
-        Log.d("TAG",""+item.oldCurrency);
-
+        customViewHolder.header.setText(setCurrenySign(item.oldCurrency));
+        customViewHolder.description.setText(MessageFormat.format("£{0}",
+                String.valueOf(item.priceGbp)));
     }
 
-    private String ssetCurrenySign(String currecy){
+    private String setCurrenySign(String currecy){
         String mReturnCurrencySign="";
         String[] separated = currecy.split(" ");
         String mCurrency = separated[0];
@@ -55,7 +52,10 @@ public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> 
                 mReturnCurrencySign ="CA$";
                 break;
             case "GBP":
-                mReturnCurrencySign ="£";
+                mReturnCurrencySign = "£";
+                break;
+            case "EUR":
+                mReturnCurrencySign = "€";
                 break;
             default:
                 mReturnCurrencySign = mCurrency;
