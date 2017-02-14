@@ -37,19 +37,19 @@ public class ProductTotalAdapter extends RecyclerView.Adapter<CustomViewHolder> 
     }
 
     private String setCurrenySign(String currecy){
-        String mReturnCurrencySign="";
+        String mReturnCurrencySign;
         String[] separated = currecy.split(" ");
         String mCurrency = separated[0];
         String amount = separated[1];
         switch (mCurrency){
             case "USD":
-                mReturnCurrencySign ="$";
+                mReturnCurrencySign = "$";
                 break;
             case "AUD":
-                mReturnCurrencySign ="A$";
+                mReturnCurrencySign = "A$";
                 break;
             case "CAD":
-                mReturnCurrencySign ="CA$";
+                mReturnCurrencySign = "CA$";
                 break;
             case "GBP":
                 mReturnCurrencySign = "£";
